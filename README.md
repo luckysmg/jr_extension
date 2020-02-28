@@ -12,6 +12,12 @@ So today,I create this lib to avoid nested code as possible as I can,to make cod
 ## Get started
 
 
+import package in your dart file:
+```dart
+import 'package:jr_extension/jr_extension.dart';
+```
+
+
 In the past we coded like this
 ```dart
         SizeBox(
