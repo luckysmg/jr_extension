@@ -39,8 +39,8 @@ today
          
 ```
 
-##It is a very simple example,it has a lot of usages like this
-##And it is very easy to underStand 
+## It is a very simple example,it has a lot of usages like this
+## And it is very easy to underStand 
 ```dart
 /// for all widgets
 SizedBox withSize({double width = 0.0, double height = 0.0})
