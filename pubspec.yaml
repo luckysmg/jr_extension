@@ -2,7 +2,7 @@ name: jr_extension
 description: A flutter package with awesome extension
 version: 0.0.1
 author: Wenjingrui
-homepage:
+homepage: https://github.com/luckysmg/jr_extension
 
 environment:
   sdk: ">=2.6.0 <3.0.0"
