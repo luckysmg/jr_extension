@@ -6,7 +6,7 @@ An awesome Flutter package with widget extension.
 In [SwiftUI](https://developer.apple.com/xcode/swiftui/) framework created by apple,views use modifier to declare what the views look,which makes code readable.
 But in flutter,we usually use some nested code to setup the properties,making the code very ugly...
 
-So today,I create this lib to avoid nested code as possible as I can,to make code readble and elegant.
+So today,I create this lib to avoid nested code as possible as I can,to make code readable and elegant.
 
 
 ## Get started
