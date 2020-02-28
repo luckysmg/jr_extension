@@ -12,7 +12,7 @@ So today,I create this lib to avoid nested code as possible as I can,to make cod
 ## Get started
 
 
-In the past we code like this
+In the past we coded like this
 ```dart
         SizeBox(
             height: 300,
@@ -29,7 +29,7 @@ In the past we code like this
       )
 ```
 
-today
+today you code like this
 ```dart
         Text(
           'bulabula',
