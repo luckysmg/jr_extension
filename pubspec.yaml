@@ -1,7 +1,6 @@
 name: jr_extension
 description: A flutter package with awesome extension
 version: 0.0.1
-author: Wenjingrui
 homepage: https://github.com/luckysmg/jr_extension
 
 environment:
