@@ -68,9 +68,9 @@ extension WidgetExtension on Widget {
   ///
   Padding padding(
       {double top = 0.0,
-        double left = 0.0,
-        double bottom = 0.0,
-        double right = 0.0}) {
+      double left = 0.0,
+      double bottom = 0.0,
+      double right = 0.0}) {
     return Padding(
       padding: EdgeInsets.fromLTRB(left, top, right, bottom),
       child: this,
@@ -169,13 +169,13 @@ extension WidgetExtension on Widget {
   /// YourWidget().tapToPushCupertinoPageRoute(context, YourPage());
   ///
   GestureDetector tapToPushCupertinoPageRoute(
-      BuildContext context,
-      Widget page, {
-        bool rootNavigator = false,
-        bool fullscreenDialog = false,
-        Function(dynamic result) callback,
-        HitTestBehavior hitTestBehavior,
-      }) {
+    BuildContext context,
+    Widget page, {
+    bool rootNavigator = false,
+    bool fullscreenDialog = false,
+    Function(dynamic result) callback,
+    HitTestBehavior hitTestBehavior,
+  }) {
     VoidCallback temp = () async {
       var result;
       result = await Navigator.of(context, rootNavigator: rootNavigator)
@@ -190,13 +190,13 @@ extension WidgetExtension on Widget {
   }
 
   GestureDetector tapToPushMaterialRoute(
-      BuildContext context,
-      Widget page, {
-        bool rootNavigator = false,
-        bool fullscreenDialog = false,
-        Function(dynamic result) callback,
-        HitTestBehavior hitTestBehavior,
-      }) {
+    BuildContext context,
+    Widget page, {
+    bool rootNavigator = false,
+    bool fullscreenDialog = false,
+    Function(dynamic result) callback,
+    HitTestBehavior hitTestBehavior,
+  }) {
     var result;
     VoidCallback temp = () async {
       result = await Navigator.of(context, rootNavigator: rootNavigator)
@@ -211,13 +211,13 @@ extension WidgetExtension on Widget {
   }
 
   GestureDetector tapToPushNamed(
-      String name,
-      dynamic args,
-      BuildContext context, {
-        bool rootNavigator = false,
-        Function(dynamic result) callback,
-        HitTestBehavior hitTestBehavior,
-      }) {
+    String name,
+    dynamic args,
+    BuildContext context, {
+    bool rootNavigator = false,
+    Function(dynamic result) callback,
+    HitTestBehavior hitTestBehavior,
+  }) {
     var result;
     VoidCallback temp = () async {
       result = await Navigator.of(context, rootNavigator: rootNavigator)
@@ -274,9 +274,9 @@ extension WidgetExtension on Widget {
 
   Widget scale(
       {@required double scale,
-        bool transformHitTests = true,
-        Offset origin,
-        Alignment alignment = Alignment.center}) {
+      bool transformHitTests = true,
+      Offset origin,
+      Alignment alignment = Alignment.center}) {
     return Transform.scale(
       alignment: alignment,
       scale: scale,
