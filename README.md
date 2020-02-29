@@ -156,20 +156,20 @@ jumpToBottom()
 
 
 ## Attention!!! Important for the best user experience
-if you want your widget has exactly height and Width
+if you want your widget has exactly height and width,
 please don't use
 
 ```dart
 yourWidget().withHeight(20).withWidth(20);
 ```
 
-you should code like this:
+You should code like this:
 
 ```dart
 yourWidget().withSize(height:20,width:20);
 ```
-This rule is also vaild for padding 
-don't use:
+This rule is also valid for padding.
+Don't use:
 ```dart
 yourWidget().paddingLeft(5).paddingRight(5);
 ```
