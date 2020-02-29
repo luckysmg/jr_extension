@@ -110,15 +110,31 @@ GestureDetector tapToPushNamed(
   })
 
 
-/// This is a extension work better especially for the page in PageView
+Widget visible(bool visible)
+Widget opacity({@required double opacity})
+Widget offset({@required Offset offset, bool transformHitTests = true})
+
+Widget rotate(
+      {@required double angle, bool transformHitTests = true, Offset origin})
+
+Widget scale(
+      {@required double scale,
+      bool transformHitTests = true,
+      Offset origin,
+      Alignment alignment = Alignment.center})
+
+Widget center({double heightFactor, double widthFactor})
+
+
+
+/// This extension works better especially for the page in PageView that will be keep alive
   /// example:
   ///  PageView.builder(itemBuilder: (BuildContext context, int index) {
   ///      return Page().keepAlive();
   ///    },);
   ///
-  Widget keepAlive() {
-    return _KeepAliveWidget(this);
-  }
+Widget keepAlive() 
+
 
 
 /// useful only on Text 
