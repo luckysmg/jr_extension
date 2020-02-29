@@ -127,7 +127,7 @@ Widget center({double heightFactor, double widthFactor})
 
 
 
-/// This extension works better especially for the page in PageView that will be keep alive
+/// This extension works better especially for the page in PageView that will be kept alive
   /// example:
   ///  PageView.builder(itemBuilder: (BuildContext context, int index) {
   ///      return Page().keepAlive();
