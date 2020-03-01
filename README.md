@@ -42,7 +42,7 @@ today you code like this
           'bulabula',
         ).withStyle(fontSize: 20, fontWeight: FontWeight.bold)
          .padding(left: 5, right: 5)
-         .withHeight(300),;
+         .withHeight(300),
          
 ```
 
