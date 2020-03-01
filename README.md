@@ -20,6 +20,7 @@ import 'package:jr_extension/jr_extension.dart';
 
 In the past we coded like this
 ```dart
+
         SizeBox(
             height: 300,
             Padding(
@@ -32,7 +33,7 @@ In the past we coded like this
               ),
             ),
           ),
-      )
+      );
 ```
 
 today you code like this
@@ -41,7 +42,7 @@ today you code like this
           'bulabula',
         ).withStyle(fontSize: 20, fontWeight: FontWeight.bold)
          .padding(left: 5, right: 5)
-         .withHeight(300),
+         .withHeight(300),;
          
 ```
 
@@ -49,35 +50,35 @@ today you code like this
 ## And it is very easy to underStand 
 ```dart
 /// for all widgets
-SizedBox withSize({double width = 0.0, double height = 0.0})
-SizedBox withWidth(double width)
-SizedBox withHeight(double height)
-Expanded expand({int flex = 1})
-DecoratedBox backgroundColor(Color color)
-ClipRRect cornerRadius(double radius)
-Padding padding({double top = 0.0,double left = 0.0,double bottom = 0.0,double right = 0.0})
-Padding paddingAll(double padding)
-Padding paddingSymmetric({double vertical = 0.0, double horizontal = 0.0})
-Padding paddingTop(double top)
-Padding paddingLeft(double left)
-Padding paddingRight(double right)
-Padding paddingBottom(double bottom)
+SizedBox withSize({double width = 0.0, double height = 0.0});
+SizedBox withWidth(double width);
+SizedBox withHeight(double height);
+Expanded expand({int flex = 1});
+DecoratedBox backgroundColor(Color color);
+ClipRRect cornerRadius(double radius);
+Padding padding({double top = 0.0,double left = 0.0,double bottom = 0.0,double right = 0.0});
+Padding paddingAll(double padding);
+Padding paddingSymmetric({double vertical = 0.0, double horizontal = 0.0});
+Padding paddingTop(double top);
+Padding paddingLeft(double left);
+Padding paddingRight(double right);
+Padding paddingBottom(double bottom);
 
 GestureDetector onTap(VoidCallback onTap,
-      {HitTestBehavior hitTestBehavior = HitTestBehavior.deferToChild})
+      {HitTestBehavior hitTestBehavior = HitTestBehavior.deferToChild});
 
 GestureDetector onDoubleTap(VoidCallback onDoubleTap,
-      {HitTestBehavior hitTestBehavior = HitTestBehavior.deferToChild})
+      {HitTestBehavior hitTestBehavior = HitTestBehavior.deferToChild});
 
 GestureDetector onLongPress(VoidCallback onLongPress,
-      {HitTestBehavior hitTestBehavior = HitTestBehavior.deferToChild})
+      {HitTestBehavior hitTestBehavior = HitTestBehavior.deferToChild});
 
 
 /// Example:
 /// Navigator.push(context, YourPage().withCupertinoRoute());
 ///
-CupertinoPageRoute withCupertinoRoute({bool fullscreenDialog = false})
-MaterialPageRoute withMaterialRoute({bool fullscreenDialog = false})
+CupertinoPageRoute withCupertinoRoute({bool fullscreenDialog = false});
+MaterialPageRoute withMaterialRoute({bool fullscreenDialog = false});
 
 ///
 /// YourWidget().tapToPushCupertinoPageRoute(context, YourPage());
@@ -89,7 +90,7 @@ GestureDetector tapToPushCupertinoPageRoute(
     bool fullscreenDialog = false,
     Function(dynamic result) callback,
     HitTestBehavior hitTestBehavior,
-  })
+  });
 
  GestureDetector tapToPushMaterialRoute(
     BuildContext context,
@@ -98,7 +99,7 @@ GestureDetector tapToPushCupertinoPageRoute(
     bool fullscreenDialog = false,
     Function(dynamic result) callback,
     HitTestBehavior hitTestBehavior,
-  })
+  });
 
 GestureDetector tapToPushNamed(
     String name,
@@ -107,23 +108,23 @@ GestureDetector tapToPushNamed(
     bool rootNavigator = false,
     Function(dynamic result) callback,
     HitTestBehavior hitTestBehavior,
-  })
+  });
 
 
-Widget visible(bool visible)
-Widget opacity({@required double opacity})
-Widget offset({@required Offset offset, bool transformHitTests = true})
+Widget visible(bool visible);
+Widget opacity({@required double opacity});
+Widget offset({@required Offset offset, bool transformHitTests = true});
 
 Widget rotate(
-      {@required double angle, bool transformHitTests = true, Offset origin})
+      {@required double angle, bool transformHitTests = true, Offset origin});
 
 Widget scale(
       {@required double scale,
       bool transformHitTests = true,
       Offset origin,
-      Alignment alignment = Alignment.center})
+      Alignment alignment = Alignment.center});
 
-Widget center({double heightFactor, double widthFactor})
+Widget center({double heightFactor, double widthFactor});
 
 
 
@@ -133,7 +134,7 @@ Widget center({double heightFactor, double widthFactor})
   ///      return Page().keepAlive();
   ///    },);
   ///
-Widget keepAlive() 
+Widget keepAlive(); 
 
 
 
@@ -161,13 +162,13 @@ Text withStyle({
     String debugLabel,
     double height,
     bool inherit,
-  })
+  });
 
 /// for scrollController
-animToTop()
-animToBottom()
-jumpToTop()
-jumpToBottom()
+animToTop();
+animToBottom();
+jumpToTop();
+jumpToBottom();
 ```
 
 
