@@ -1,3 +1,6 @@
+Language: [English](https://github.com/luckysmg/jr_extension/blob/master/README.md) | [中文简体](https://github.com/luckysmg/jr_extension/blob/master/README-CN.md)
+
+
 # jr_extension
 
 一个拥有众多拓展的flutter包

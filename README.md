@@ -1,3 +1,5 @@
+Language: [English](https://github.com/luckysmg/jr_extension/blob/master/README.md) | [中文简体](https://github.com/luckysmg/jr_extension/blob/master/README-CN.md)
+
 # jr_extension
 
 An awesome Flutter package with widget extension.
