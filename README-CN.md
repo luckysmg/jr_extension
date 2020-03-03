@@ -193,3 +193,5 @@ yourWidget().paddingLeft(5).paddingRight(5);
 yourWidget().padding(left: 5, right: 5);
 ```
 
+## 我的其他包：
+  [linked_scroll_widgets](https://pub.dev/packages/linked_scroll_widgets)

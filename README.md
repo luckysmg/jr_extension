@@ -198,3 +198,6 @@ use like this
 yourWidget().padding(left: 5, right: 5);
 ```
 
+## My other package：
+  [linked_scroll_widgets](https://pub.dev/packages/linked_scroll_widgets)
+
