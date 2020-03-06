@@ -1,6 +1,6 @@
 name: jr_extension
 description: A flutter package with awesome widget extensions, for  people who want make code look beautiful and don't like nested code
-version: 0.1.2
+version: 0.1.3
 homepage: https://github.com/luckysmg/jr_extension
 
 environment:

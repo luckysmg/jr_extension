@@ -64,6 +64,10 @@ Padding paddingBottom(double bottom);
 GestureDetector onTap(VoidCallback onTap,
       {HitTestBehavior hitTestBehavior = HitTestBehavior.deferToChild});
 
+Widget onFeedBackTap(VoidCallback onTap,
+      {HitTestBehavior hitTestBehavior = HitTestBehavior.deferToChild,
+      bool touchFeedBack = false});
+
 GestureDetector onDoubleTap(VoidCallback onDoubleTap,
       {HitTestBehavior hitTestBehavior = HitTestBehavior.deferToChild});
 
@@ -107,6 +111,8 @@ GestureDetector tapToPushNamed(
     HitTestBehavior hitTestBehavior,
   });
 
+SliverToBoxAdapter sliverBoxAdapter();
+
 
 Widget visible(bool visible);
 Widget opacity({@required double opacity});
@@ -123,6 +129,8 @@ Widget scale(
 
 Widget center({double heightFactor, double widthFactor});
 
+
+PreferredSize preferredSize(Size size);
 
 
 /// 这个是专门给pageView里面的页面设计的，一行完成对页面状态的"保活"，避免划走页面被销毁

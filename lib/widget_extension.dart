@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 
 ///
@@ -143,6 +144,22 @@ extension WidgetExtension on Widget {
       behavior: hitTestBehavior,
       onLongPress: onLongPress,
       child: this,
+    );
+  }
+
+  ///it is very like onTap extension but when you put your finger on it, its color will change,
+  ///and you can decide that whether it will have a touchFeedBack (vibration on your phone)
+  ///
+  /// 他很像 onTap 拓展，区别在于你把你的手指放上去的时候，他颜色会改变，有一个视觉上的反馈，
+  /// 另外，你还可以通过控制touchFeedBack 变量来让其点击后震动，获得触摸反馈.
+  ///
+  Widget onFeedBackTap(VoidCallback onTap,
+      {HitTestBehavior hitTestBehavior = HitTestBehavior.deferToChild,
+      bool touchFeedBack = false}) {
+    return _CallbackButton(
+      child: this,
+      onTap: onTap,
+      needHaptic: touchFeedBack,
     );
   }
 
@@ -293,6 +310,25 @@ extension WidgetExtension on Widget {
       child: this,
     );
   }
+
+  SliverToBoxAdapter sliverBoxAdapter() {
+    return SliverToBoxAdapter(
+      child: this,
+    );
+  }
+
+  ///Maybe often use this when you want to make your own AppBar or NavigationBar with your custom UI
+  ///
+  /// tip:the size of ios navigation bar is Size.fromHeight(44.0) [kMinInteractiveDimensionCupertino],
+  /// material style appBar is Size.fromHeight(56.0)   [kToolbarHeight],
+  ///
+  /// example:
+  ///  appBar: Center(
+  ///   child: Text("hello"),
+  /// ).preferredSize(Size.fromHeight(44.0)),
+  PreferredSize preferredSize(Size size) {
+    return PreferredSize(child: this, preferredSize: size);
+  }
 }
 
 class _KeepAliveWidget extends StatefulWidget {
@@ -313,5 +349,64 @@ class _KeepAliveState extends State<_KeepAliveWidget>
   Widget build(BuildContext context) {
     super.build(context);
     return widget.child;
+  }
+}
+
+class _CallbackButton extends StatefulWidget {
+  final VoidCallback onTap;
+  final Widget child;
+  final Color normalColor;
+  final Color pressedColor;
+  final bool needHaptic;
+
+  const _CallbackButton(
+      {Key key,
+      this.onTap,
+      this.child,
+      this.normalColor = Colors.transparent,
+      this.pressedColor = Colors.black12,
+      this.needHaptic = false})
+      : super(key: key);
+
+  @override
+  _CallbackButtonState createState() => _CallbackButtonState();
+}
+
+class _CallbackButtonState extends State<_CallbackButton> {
+  Color bgColor;
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: widget.onTap,
+      onTapDown: handleTapDown,
+      onTapUp: handleTapUp,
+      onTapCancel: handleCancel,
+      child: Container(
+        color: bgColor,
+        child: widget.child,
+      ),
+    );
+  }
+
+  void handleTapDown(TapDownDetails tapDownDetails) {
+    setState(() {
+      bgColor = widget.pressedColor;
+    });
+  }
+
+  void handleCancel() {
+    setState(() {
+      bgColor = widget.normalColor;
+    });
+  }
+
+  void handleTapUp(TapUpDetails tapDownDetails) {
+    if (widget.needHaptic) {
+      HapticFeedback.heavyImpact();
+    }
+    setState(() {
+      bgColor = widget.normalColor;
+    });
   }
 }

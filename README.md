@@ -69,12 +69,17 @@ Padding paddingBottom(double bottom);
 GestureDetector onTap(VoidCallback onTap,
       {HitTestBehavior hitTestBehavior = HitTestBehavior.deferToChild});
 
+Widget onFeedBackTap(VoidCallback onTap,
+      {HitTestBehavior hitTestBehavior = HitTestBehavior.deferToChild,
+      bool touchFeedBack = false});
+
 GestureDetector onDoubleTap(VoidCallback onDoubleTap,
       {HitTestBehavior hitTestBehavior = HitTestBehavior.deferToChild});
 
 GestureDetector onLongPress(VoidCallback onLongPress,
       {HitTestBehavior hitTestBehavior = HitTestBehavior.deferToChild});
 
+SliverToBoxAdapter sliverBoxAdapter();
 
 /// Example:
 /// Navigator.push(context, YourPage().withCupertinoRoute());
@@ -129,6 +134,8 @@ Widget scale(
 Widget center({double heightFactor, double widthFactor});
 
 
+PreferredSize preferredSize(Size size);
+
 
 /// This extension works better especially for the page in PageView that will be kept alive
   /// example:
@@ -137,6 +144,7 @@ Widget center({double heightFactor, double widthFactor});
   ///    },);
   ///
 Widget keepAlive(); 
+
 
 
 
