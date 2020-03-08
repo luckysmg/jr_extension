@@ -160,6 +160,7 @@ extension WidgetExtension on Widget {
       child: this,
       onTap: onTap,
       needHaptic: touchFeedBack,
+      hitTestBehavior: hitTestBehavior,
     );
   }
 
@@ -358,6 +359,7 @@ class _CallbackButton extends StatefulWidget {
   final Color normalColor;
   final Color pressedColor;
   final bool needHaptic;
+  final HitTestBehavior hitTestBehavior;
 
   const _CallbackButton(
       {Key key,
@@ -365,7 +367,8 @@ class _CallbackButton extends StatefulWidget {
       this.child,
       this.normalColor = Colors.transparent,
       this.pressedColor = Colors.black12,
-      this.needHaptic = false})
+      this.needHaptic = false,
+      this.hitTestBehavior})
       : super(key: key);
 
   @override
@@ -378,6 +381,7 @@ class _CallbackButtonState extends State<_CallbackButton> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
+      behavior: widget.hitTestBehavior,
       onTap: widget.onTap,
       onTapDown: handleTapDown,
       onTapUp: handleTapUp,
