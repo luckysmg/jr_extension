@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 
 extension TextExtension on Text {
   Text withStyle({
-    double fontSize = 14,
+    dynamic fontSize = 14.0,
     FontWeight fontWeight,
     Color color,
     FontStyle fontStyle,
