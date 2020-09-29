@@ -414,3 +414,25 @@ class _CallbackButtonState extends State<_CallbackButton> {
     });
   }
 }
+
+typedef AnimationUpdateCallBack<T> = Function(T value, double percent);
+
+withAnimation<T>(
+    {@required TickerProvider vsync,
+    @required Tween<T> tween,
+    @required AnimationUpdateCallBack<T> callBack,
+    Duration duration = const Duration(seconds: 1),
+    double initialValue = 0.0,
+    Curve curve = Curves.linear}) {
+  AnimationController controller = AnimationController(
+      vsync: vsync, duration: duration, value: initialValue);
+  final curveAnimation = CurvedAnimation(parent: controller, curve: curve);
+  final Animation animation = tween.animate(curveAnimation);
+  animation.addListener(() {
+    callBack?.call(animation.value, controller.value);
+  });
+
+  controller.forward().whenCompleteOrCancel(() {
+    controller.dispose();
+  });
+}

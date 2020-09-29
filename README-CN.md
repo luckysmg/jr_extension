@@ -44,7 +44,24 @@ import 'package:jr_extension/jr_extension.dart';
          
 ```
 
-## 上面只是一些最简单的示例，有一堆的扩展方法供你使用
+轻松使用简单的动画
+```dart
+///API
+withAnimation<double>(
+    vsync: this,///一般是你的widget的state，记得with TickerProviderStateMixin
+    tween: Tween(begin: num, end: 300.0),
+    duration: Duration(seconds: 2),
+    curve: Curves.linear,
+    initialValue: 0.0,
+    callBack: (value, per) {
+      ///value是现在的动画的值
+      ///per是动画目前执行完成的百分比，区间[0,1]
+    });
+```
+
+
+
+## 有一堆的扩展方法供你使用
 ```dart
 /// 对所有的widget都可用
 SizedBox withSize({double width = 0.0, double height = 0.0});
