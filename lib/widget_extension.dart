@@ -423,6 +423,7 @@ withAnimation<T>(
     @required AnimationUpdateCallBack<T> callBack,
     Duration duration = const Duration(seconds: 1),
     double initialValue = 0.0,
+    VoidCallback onComplete,
     Curve curve = Curves.linear}) {
   AnimationController controller = AnimationController(
       vsync: vsync, duration: duration, value: initialValue);
@@ -433,6 +434,7 @@ withAnimation<T>(
   });
 
   controller.forward().whenCompleteOrCancel(() {
+    onComplete?.call();
     controller.dispose();
   });
 }
